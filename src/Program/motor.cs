@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    public class motor
+    public class Motor
     {
         
     }
