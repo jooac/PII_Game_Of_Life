@@ -5,16 +5,15 @@ namespace Program
 {
     public class BoardImporter
     {
-        string content = File.ReadAllText(path :"src/Program/board.txt");
-        public static bool[,] Import(string url)
+        
+        public static Board Import(string path)
         {
-            string content = File.ReadAllText(url);
-            string[] contentLines = content
-                .Split('\n', StringSplitOptions.RemoveEmptyEntries);
+            string content = File.ReadAllText(path);
+            string[] contentLines = content.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
-            int width = contentLines[0].TrimEnd('\r').Length;
             int height = contentLines.Length;
-            bool[,] board = new bool[width, height];
+            int width = contentLines[0].TrimEnd('\r').Length;
+            Board board = new Board(height, width);
 
             for (int y = 0; y < height; y++)
             {
@@ -22,7 +21,7 @@ namespace Program
 
                 for (int x = 0; x < width; x++)
                 {
-                    board[x, y] = line[x] == '1';
+                    board.SetCell(x,y,line[x]== '1');
                 }
             }
 
