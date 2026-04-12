@@ -5,6 +5,13 @@ using System.Threading.Tasks;
 
 namespace Program
 {
+    /// <summary>
+    /// Esta clase es la encargada de cumplir las reglas del juego.
+    /// Cumple con SRP, porque esa es su única responsabilidad, y por lo tanto,
+    /// su única razón de cambio.
+    /// Además cumple con Expert, porque es la única clase que tiene toda la información necesaria
+    /// para aplicar las reglas y calcular la siguiente generación.
+    /// </summary>
     public class Motor
     {
         public Board NextGeneration(Board currentBoard)

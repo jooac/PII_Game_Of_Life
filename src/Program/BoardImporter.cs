@@ -3,6 +3,12 @@ using System.IO;
 
 namespace Program
 {
+    /// <summary>
+    /// Cumple con SRP porque su única responsabilidad, y motivo de cambio,
+    /// es leer un archivo de texto y convertirlo en un objeto Board.
+    /// También cumple con Expert, porque es una clase dedicada para leer,
+    /// e interpretar el archivo para construir el tablero.
+    /// </summary>
     public class BoardImporter
     {
         
