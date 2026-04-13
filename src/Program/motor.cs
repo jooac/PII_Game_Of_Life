@@ -48,9 +48,9 @@ namespace Program
         private int CountAliveNeighbors(Board board, int x, int y)
         {
             int aliveNeighbors = 0;
-            for (int i = x -1; i <= x; i++)
+            for (int i = x - 1; i <= x + 1; i++)
             {
-                for (int j = y - 1; j <= y; j++)
+                for (int j = y - 1; j <= y + 1; j++)
                 {
                     // Valida que la posición (i, j) esté dentro de los límites del tablero
                     if (i >= 0 &&

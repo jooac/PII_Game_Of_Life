@@ -16,7 +16,7 @@ namespace Program
                 Console.Clear();
                 printer.Print(board); //imprime generacion actual 
                 board = motor.NextGeneration(board); //calcula siguiente generacion
-                Thread.Sleep(2200); //pasua de 300ms 
+                Thread.Sleep(300); //pasua de 300ms 
             }
         }
     }
